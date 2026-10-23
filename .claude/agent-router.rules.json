@@ -1,0 +1,33 @@
+{
+  "models": {
+    "categoryModels": {
+      "docs": "wu/typhoon-thai"
+    }
+  },
+  "rules": [
+    {
+      "agent": "none",
+      "category": "debugging",
+      "keywords": ["แก้บั๊ก", "test fail", "เทสไม่ผ่าน"],
+      "complexity": "medium",
+      "priority": 10,
+      "reason": "Thai bug-fix keywords"
+    },
+    {
+      "agent": "Explore",
+      "category": "codebase-search",
+      "keywords": ["หาทุกที่", "ใช้ที่ไหนบ้าง"],
+      "complexity": "low",
+      "priority": 10,
+      "reason": "broad read-only search"
+    },
+    {
+      "agent": "Plan",
+      "category": "planning",
+      "keywords": ["วางแผน", "ออกแบบ"],
+      "complexity": "high",
+      "priority": 5,
+      "reason": "design before coding"
+    }
+  ]
+}
