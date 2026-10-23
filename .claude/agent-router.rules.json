@@ -1,14 +1,38 @@
 {
   "models": {
+    "tierProfile": "claude",
+    "tiers": {
+      "high": "Opus-Ultra",
+      "medium": "Tier1",
+      "low": "Gemini"
+    },
     "categoryModels": {
-      "docs": "wu/typhoon-thai"
-    }
+      "implementation": "codex",
+      "codebase-search": "low",
+      "planning": "Opus-Ultra",
+      "debugging": "high",
+      "code-review": "Tier1",
+      "docs-writing": "wu/typhoon-thai",
+      "question": "low",
+      "claude-code-help": "low",
+      "ops": "Tier1",
+      "chit-chat": "low",
+      "other": "auto"
+    },
+    "agentModels": {
+      "*": "auto"
+    },
+    "forceTier": false
   },
   "rules": [
     {
       "agent": "none",
       "category": "debugging",
-      "keywords": ["แก้บั๊ก", "test fail", "เทสไม่ผ่าน"],
+      "keywords": [
+        "แก้บั๊ก",
+        "test fail",
+        "เทสไม่ผ่าน"
+      ],
       "complexity": "medium",
       "priority": 10,
       "reason": "Thai bug-fix keywords"
@@ -16,7 +40,10 @@
     {
       "agent": "Explore",
       "category": "codebase-search",
-      "keywords": ["หาทุกที่", "ใช้ที่ไหนบ้าง"],
+      "keywords": [
+        "หาทุกที่",
+        "ใช้ที่ไหนบ้าง"
+      ],
       "complexity": "low",
       "priority": 10,
       "reason": "broad read-only search"
@@ -24,7 +51,10 @@
     {
       "agent": "Plan",
       "category": "planning",
-      "keywords": ["วางแผน", "ออกแบบ"],
+      "keywords": [
+        "วางแผน",
+        "ออกแบบ"
+      ],
       "complexity": "high",
       "priority": 5,
       "reason": "design before coding"

@@ -53,6 +53,6 @@ maverick
 [.claude/agent-router.rules.json](.claude/agent-router.rules.json)
 
 - **rules:** keyword ภาษาไทยสำหรับ debugging, codebase-search, planning ตอบทันทีโดยไม่เรียกโมเดล
-- **models:** ทับค่า global แค่ `docs` → `wu/typhoon-thai` ส่วนประเภทอื่นใช้ค่าจากไฟล์ global (`~/.claude/agent-router.rules.json`)
+- **models:** ตั้งครบทุกค่า (tier, ทั้ง 11 ประเภท, agentModels, forceTier) จึงไม่ขึ้นกับไฟล์ global ต่างจาก global แค่ `docs-writing` → `wu/typhoon-thai`
 
 แก้ไฟล์แล้วพิมพ์ `/router reload`
